@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+            // const product = {
+            //     name: 'socks',
+            //     price: 1090
+            // };
+            // console.log(product);
+            // console.log(product.name);
+            // console.log(product.price);
+
+            // product.name = 'cotton socks';
+            // console.log(product.name);
+
+            // product.newProperty = true;
+            // console.log(product);
+
+            // delete product.newProperty;
+            // console.log(product);
+
+            const product2 = {
+                name: 'shirt',
+                'delivery-time': '1 day',
+                rating: {
+                    stars: 4.5,
+                    count: 87
+                },
+                fun: function function1 () {
+                    console.log('function inside object')
+                    /* pag lalagay ng function sa loob ng object*/
+                }
+            }
+
+            console.log(product2);
+
+            console.log(product2['name'])/* pag gamit ng [ ] sa pag tawag ng object*/
+
+            console.log(product2['delivery-time']);/* pag gamit ng [ ] sa pag tawag ng object*/
+
+            console.log(product2.rating.count);/* pag tawag ng isang object sa loob ng isa pang object using dot (.) notation*/
+
+            product2.newProperty = true;  /* pag add ng bagong property sa Object */
+
+            delete product2.newProperty; /* pag delete ng property sa object using (delete) and dot (.) notation */
+             console.log(product2);
+
+            product2.fun(); /* pag tawag ng function sa loob ng objects */
+
+            console.log(JSON.stringify(product2)); /* pag convert ng object sa JSON */
+
+            const jsonString = JSON.stringify(product2); /* nilagay sa jsonString ang na convert na JSON.stringify(product2)*/
+            console.log(JSON.parse(jsonString)); /* */
+        </script>
+    </body>
+</html>
